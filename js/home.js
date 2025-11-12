@@ -67,7 +67,7 @@ function returnStyle(){
           let article  = document.createElement('article')
           article.innerHTML = `
           <div class="article-contain">
-            <img rel="preload" as="image" loading="lazy" src="${e.imagem}" alt="${e.alt}"/>
+            <img rel="preload" as="image" loading="lazy" src="${e.banner}" alt="${e.alt}"/>
             <div class="article-description">
               <p class="${e.estilo}">${e.categoria}</p>
               <h3><a href="${e.link}">${e.titulo}</a></h3>
