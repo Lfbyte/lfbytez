@@ -57,7 +57,7 @@ function returnStyle(){
 
   async function carregarUltimosPosts(){
 
-    await fetch('../posts/posts.json').then(res => res.json())
+    await fetch('./posts/posts.json').then(res => res.json())
     .then(posts =>{
         //ordenando pelo post mais recente
         let ultimosPosts = posts.sort((a,b)=> new Date(b.data) - new Date(a.data)).slice(0,3)
