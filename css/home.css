@@ -31,12 +31,16 @@ html, body{
 
 }
 
-body{
+body {
 
     background-color: rgb(21, 22, 24);
     transition: 0.2s ease-in-out;
 
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+ }
 
 
 header{
@@ -351,6 +355,7 @@ p.cat-blog{
 }
 
 footer {
+    
     transition: 0.3s ease;
     display: flex;
     justify-content: center;
@@ -364,9 +369,9 @@ footer {
     font-size: 14px;
     font-family: sans-serif;
     font-weight: bold;
-    margin:20px 0;
+    margin:0px;
     background-color:#1d2338;
-  
+
 }
 
 .ler-artigo{
@@ -392,6 +397,22 @@ footer {
 
 @media screen and (max-width: 800px){
 
+    body,html{
+
+
+        overflow: auto;
+    }
+
+    .conteudo-principal{
+
+        margin-top:calc(10vh);
+    }
+
+    body{
+        display: block;
+    
+    }
+
     .ultimas-postagens h1{
 
         font-size: 1.6rem;
@@ -402,6 +423,30 @@ footer {
          row-gap: 10px;
    
     }
+
+    .ler-artigo:hover{
+
+        background-color: rgb(120, 82, 18);
+
+    }
+
+    h3 > a:hover{
+
+        color:none;
+    }
+
+
+.article-description h3 a:hover{
+
+    color: black;
+}
+
+    
+    footer{
+
+        margin-top:15px;
+    }
+
 }
 
 /*-------------------------------------------------------------*/
