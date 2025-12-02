@@ -2,6 +2,7 @@ window.addEventListener("load", (e) => {
   const nav = document.querySelector("nav");
   const container = document.querySelector("main");
   const navHeight = nav.offsetHeight;
+  container.style.marginTop = "80px";
 
   
 

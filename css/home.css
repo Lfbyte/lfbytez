@@ -35,7 +35,9 @@ body {
 
     background-color: rgb(21, 22, 24);
     transition: 0.2s ease-in-out;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   
 
  }
@@ -193,10 +195,9 @@ div.light-dark-mode:hover{
 .conteudo-principal{
 
     margin:0 10px;
-  
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+   
     
 }
 
@@ -368,7 +369,7 @@ footer {
     font-family: sans-serif;
     font-weight: bold;
     background-color:#1d2338;
-    margin-top:15px;
+    margin-top: 15px;
     
 }
 
@@ -407,7 +408,7 @@ footer {
     }
 
     body{
-        display: block;
+        /* display: block ; */
     
     }
 
