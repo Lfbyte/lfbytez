@@ -3,6 +3,8 @@ window.addEventListener("load", (e) => {
   const container = document.querySelector("main");
   const navHeight = nav.offsetHeight;
 
+  
+
   setTimeout(returnStyle, 100);
 });
 
