@@ -2,13 +2,22 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <!-- imutaveis -->
     <script defer src="../../js/postagens.js"></script>
     <link rel="stylesheet" href="../../css/navandposts.css" as="style">
     <link rel="shortcut icon" href="../../favicon/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>&nbsp;</title>
-</head>
-<body>
+
+    <!-- posts meta -->
+    <meta property="og:title" content="Problemas com reconhecimento de wifi - Vaio e Lenovo">
+    <meta property="og:description" content="notebooks-vaio">
+    <meta property="og:image" content="https://lfbyte.github.io/lfbytez/assets/img/vaio-positivo.jpg">
+    <meta property="og:url" content="https://lfbyte.github.io/lfbytez/posts/tecnologia/problemas-com-reconhecimento-de-wifi.html">
+    <meta property="og:type" content="article">
+
+ </head>
+ <body>
     <header>
         <nav>
             <h1><a href="/lfbytez">&lt;lfbytez /&gt;</a></h1>
@@ -120,15 +129,15 @@
                             </div>
                             <h2 class="header-2">A solução</h2>                            
                             <p>
-                                Após efetuarmos mais pesquisas, verificamos que seria necessário o uso da compilação do driver 
-                                pelo <b class="bolder">DKMS</b> (<i>Dynamic Kernel Module Support</i>), que é uma forma de compilar programas de 
-                                maneira dinâmica no Linux. Ou seja, mesmo que o sistema atualize o kernel e seus módulos, os 
-                                programas compilados através do DKMS estarão sempre presentes na nova versão do sistema, sua compilação passa
-                                a ser dinâmica.
+                                Após efetuarmos mais algumas pesquisas, verificamos que seria necessário o uso da compilação do driver de wifi 
+                                utilizando o <b class="bolder">DKMS</b> (<i>Dynamic Kernel Module Support</i>) que nada mais é do que uma maneira 
+                                de compilar programas dinamicamente. Isso quer dizer que mesmo que o sistema atualize o kernel e 
+                                seus módulos, os programas compilados através do <i>DKMS</i> estarão sempre presentes na nova versão do sistema e isso chamamos de
+                                compilação dinâmica.
                             </p>
 
                             <p>
-                                Contudo, quando ocorre a atualização do kernel, os headers não são atualizados
+                                Contudo, quando ocorre a atualização
                             </p>
 
                             
