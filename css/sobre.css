@@ -144,7 +144,7 @@ div.light-dark-mode{
     justify-self: start;
     padding:5px;
     overflow: hidden; */
-    display: none;
+    display: none !important;
 
 }
 
