@@ -218,6 +218,11 @@ div.light-dark-mode:hover{
 
 }
 
+.ultimas-postagens h1{
+    transition: 0.5s ease;
+    opacity: 0;
+}
+
 .ultimas-postagens article h3::first-letter{
 
     text-transform: capitalize;   
@@ -245,6 +250,8 @@ div.light-dark-mode:hover{
     transition: 0.5s ease-in-out;
     opacity: 0;
 }
+
+
 
 .reveal-article{
 

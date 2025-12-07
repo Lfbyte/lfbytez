@@ -6,8 +6,8 @@ window.addEventListener("load", (e) => {
 
   
 
-  // setTimeout(returnStyle, 100);
-  setTimeout(returnStyle, 1500);
+  setTimeout(returnStyle, 300);
+  // setTimeout(returnStyle, 1500);
 });
 
 var barraTopo = document.getElementById("x1");
@@ -47,7 +47,11 @@ function returnStyle() {
   document
     .querySelectorAll("article")
     .forEach((e) => e.classList.add("reveal-article"));
-}
+
+ document
+    .querySelectorAll(".ultimas-postagens h1")
+    .forEach((e) => e.classList.add("reveal-article"));
+  }
 
 async function carregarUltimosPosts() {
   await fetch("./posts/posts.json")
