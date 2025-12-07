@@ -75,7 +75,7 @@ nav h1{
 
 
 nav h1 a{
-    
+
     text-decoration:none;
     color:white;
 }
@@ -117,7 +117,7 @@ div.light-dark-mode{
     justify-self: start;
     padding:5px;
     overflow: hidden;
-
+    display: none  !important;
 }
 
 
