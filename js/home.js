@@ -14,29 +14,29 @@ var barraMeio = document.getElementById("x2");
 var barraBaixo = document.getElementById("x3");
 
 function animateX() {
-  const isClosed = barraBaixo.style.display === "none";
+    const isClosed = barraBaixo.style.display === "none";
 
-  if (isClosed) {
-    document.getElementsByClassName("nav-options")[0].style.display = "none";
+    if (isClosed) {
+      document.getElementsByClassName("nav-options")[0].style.display = "none";
 
-    // Volta ao hamburguer normal
-    barraBaixo.style.display = "block";
-    barraTopo.style.transform = "rotate(0deg) translate(0, 0)";
-    barraMeio.style.transform = "rotate(0deg) translate(0, 0)";
-    // Mantém largura igual pra todas
-    barraTopo.style.width = "60%";
-    barraMeio.style.width = "60%";
-  } else {
-    // Transforma em X
+      // Volta ao hamburguer normal
+      barraBaixo.style.display = "block";
+      barraTopo.style.transform = "rotate(0deg) translate(0, 0)";
+      barraMeio.style.transform = "rotate(0deg) translate(0, 0)";
+      // Mantém largura igual pra todas
+      barraTopo.style.width = "60%";
+      barraMeio.style.width = "60%";
+    } else {
+      // Transforma em X
 
-    document.getElementsByClassName("nav-options")[0].style.display = "flex";
+      document.getElementsByClassName("nav-options")[0].style.display = "flex";
 
-    barraBaixo.style.display = "none";
-    barraTopo.style.transform = "rotate(45deg) translate(7px, 6px)";
-    barraMeio.style.transform = "rotate(-45deg) translate(5px, -5px)";
-    barraTopo.style.width = "30px";
-    barraMeio.style.width = "30px";
-  }
+      barraBaixo.style.display = "none";
+      barraTopo.style.transform = "rotate(45deg) translate(7px, 6px)";
+      barraMeio.style.transform = "rotate(-45deg) translate(5px, -5px)";
+      barraTopo.style.width = "30px";
+      barraMeio.style.width = "30px";
+    }
 }
 
 function returnStyle() {

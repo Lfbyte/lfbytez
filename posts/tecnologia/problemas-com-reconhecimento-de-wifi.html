@@ -23,7 +23,7 @@
             <h1><a href="/lfbytez">&lt;lfbytez /&gt;</a></h1>
           <div class="options-container">
 
-            <div class="light-dark-mode">
+            <div onclick="light_dark()" class="light-dark-mode">
                     <svg enable-background="new 0 0 512 512" id="Layer_1" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g>
                             <g>
@@ -87,60 +87,79 @@
                         <div class="content-text">
                             <h2 class="header-2">O problema</h2>
                             <p>
-                                Em mais um dia comum de trabalho, recebemos alguns notebooks dos modelos <i>Lenovo IdeaPad 3</i> e <i>Sony Vaio</i> com processadores
-                                <i><b class="bolder">INTEL</b></i> e <i><b class="bolder">AMD</b></i>. O time de desenvolvimento estava precisando de alguns 
+                                Em mais um dia comum de trabalho, recebemos alguns notebooks dos modelos <i>Lenovo IdeaPad 3</i> e <i>Sony Vaio FE15</i> 
+                                com processadores <i><b class="bolder">INTEL</b></i> e <i><b class="bolder">AMD</b></i>. 
+                                O time de desenvolvimento estava precisando de alguns 
                                 notebooks novos para executar alguns testes mais robustos e melhorar algumas questões de performance, sendo necessário mais 
-                                poder de memória e processamento; então, por que não colocar essas novas máquinas para eles ? Foi o que nós fizemos.                             
+                                poder de memória e processamento; então, por que não colocar essas novas máquinas para eles? Foi o que nós fizemos.                             
                             </p>
 
                             <p>
-                                Infelizmente, alguns problemas de incompatibilidade com o <b class="bolder">Debian</b> que é uma 
-                                das distribuições GNU/Linux que usamos, começaram a aparecer, em especial, o não reconhecimento do <i>wifi</i>.
-                                Em busca de soluções para este problema, encontrei um fórum da <i>Lenovo</i> em que outros usuários
-                                também relataram a experiência frustrante ao tentar utilizar distribuições como Mint, Debian e Ubuntu, 
-                                sem sucesso.
+                                Após efetuar alguns testes, problemas de incompatibilidade com o <i>wifi</i> no <b class="bolder">Debian</b> 
+                                &#40;uma  das distribuições GNU/Linux que usamos&#41; começaram a ser evidenciados. 
+                                Em busca de soluções para este problema, 
+                                encontrei no fórum da <i>Lenovo</i> relatos de outros usuários informando sobre a experiência frustrante ao tentar utilizar 
+                                distribuições como Mint, Debian e Ubuntu, nesse modelo em específico. 
                            </p>
 
-                            <p>Discussões sobre o problema:</p>
+                            <p>Relatos e informações:</p>
                             
                             <ol class="lista">
                                         <li><a rel="noopener" target="_blank" href="https://forums.lenovo.com/t5/Lenovo-IdeaPad-1xx-3xx-5xx-7xx-Edge-LaVie-Z-Flex-Laptops/Lenovo-IdeaPad-3-15IIL05-doesn-t-want-to-connect-to-the-wifi/m-p/5209491"> Lenovo IdeaPad 3 15IIL05 doesn't want to connect to the wifi</a></li>             
                                         <li><a href="https://unix.stackexchange.com/questions/725421/no-wifi-on-ideapad-3-17aba7-realtek-b852">No wifi on IdeaPad 3 17ABA7 (Realtek b852)</a></li>
-                             </ol>
+                            
+                                    </ol>
                              
                             <p>
-                                        Pesquisando mais na internet e entendendo o problema, nossa equipe encontrou um repositório 
-                                        que apresentava uma forma de compilação de um driver para reconhecimento
-                                        da placa wireless desse modelo.
+                                        Efetuei outros testes utilizando o <i>Windows</i> e não foram apresentados problemas de incompatibilidade ou 
+                                        reconhecimento de wifi.
+                                        Pesquisando mais na internet e entendendo o problema encontrei repositórios que disponibilizam drivers 
+                                        para compilação e ativação da placa <i>wifi</i> do <i>Lenovo Ideapad 3</i>. Para isso, pesquisei o manual
+                                        do fabricante e os drivers disponíveis no site do fabricante para dar início a resolução do problema.
+                            </p>
+                            
+                           
+                            <p>      
+                                Após algumas tentativas sem sucesso utilizando outros drivers e receitas disponibilizadas em outros repositórios, prossegui
+                                com o disponibilizado pelo usuário: <i><strong class="bolder">HRex39</strong></i>. Efetuando a compilação do driver, a placa wireless voltou a funcionar, mas ainda
+                                existia um problema. Ao desligar a máquina, o <i>wifi</i> parou de ser reconhecido, sendo necessário efetuar novamente a sua compilação, ou seja, 
+                                a cada reinicialização seria necessário efetuar esse procedimento, o que seria inviável.
                             </p>
                             
                             <ul class="list-style">
                                 <li><a target="_blank" href="https://github.com/HRex39/rtl8852be">github.com/HRex39/rtl8852be</a></li>
                             </ul>
-                            
-                           
-                            <p>      
-                                Após algumas tentativas sem sucesso utilizando outros drivers e receitas disponibilizadas em outros repositórios, seguimos
-                                com o do HRex39.Efetuando a compilação do driver e executando os passos descritos, o wifi voltou a funcionar, porém, ao desligar 
-                                a máquina, o wifi parou de ser reconhecido, sendo necessário a sua compilação a cada reinicialização, o que seria inviável.
-                            </p>
                             <div class="contain-img-content">
-                                <img style="object-position: center" alt="goku-saiyajin"  class="contain-img-content" src="../../assets/img/gifs/hamming-computer.gif" />
+                                <img style="object-position: center" alt="hamming-notebook"  class="contain-img-content" src="../../assets/img/gifs/hamming-computer.gif" />
                             </div>
-                            <h2 class="header-2">A solução</h2>                            
+                            <h2 class="header-2">Mais problemas</h2>                            
                             <p>
-                                Após efetuarmos mais algumas pesquisas, verificamos que seria necessário o uso da compilação do driver de wifi 
-                                utilizando o <b class="bolder">DKMS</b> (<i>Dynamic Kernel Module Support</i>) que nada mais é do que uma maneira 
-                                de compilar programas dinamicamente. Isso quer dizer que mesmo que o sistema atualize o kernel e 
-                                seus módulos, os programas compilados através do <i>DKMS</i> estarão sempre presentes na nova versão do sistema e isso chamamos de
-                                compilação dinâmica.
+                                Após pesquisar mais e aprender sobre o driver e outras coisas mais, entendi que seria necessário compilar o driver 
+                                utilizando o <b class="bolder">DKMS</b> (<i>Dynamic Kernel Module Support</i>), que nada mais é do que uma maneira 
+                                de compilar programas dinamicamente. Isso quer dizer que mesmo que o sistema atualize o <i><b class="bolder">Kernel</b></i> e 
+                                seus módulos, os programas compilados através do <i>DKMS</i> estarão sempre presentes na nova versão do sistema. 
+                                Entendendo um pouco sobre o dkms e compilação dinâmica, existia um último problema: os headers.
                             </p>
-
-                            <p>
-                                Contudo, quando ocorre a atualização
-                            </p>
-
                             
+                            <h2 class="header-2">O que isso significa ?</h2>
+                            <p>
+                                Quando o <i><b class="bolder">Debian</b></i> é atualizado, os headers da nova versão não são atualizados juntamente. Sendo necessário a atualização manual 
+                                utilizado o <i class="bolder">APT</i>, compilando diretamente ou criando uma rotina para que seja atualizado. Se os headers não são atualizados o driver
+                                acaba sendo desativado na próxima reinicialização.
+                            </p>
+                             <div class="contain-img-content">
+                                <img style="object-position: center" alt="throw-pc"  class="contain-img-content" src="../../assets/img/gifs/throw.webp" />
+                            </div>
+                           
+
+                            <h2 class="header-2">A solução</h2>                            
+                           
+                            <p>
+                                Todo esse processo é cansativo e chato de fazer. Eu precisei de muitos dias entre tentativa e erro para construir uma solução capaz de executar todo esse processo.
+                                O que eu não sabia é que o script que eu desenvolvi também iria servir para outro modelo de notebook que possui o mesmo problema com distros Linux: <i>Sony Vaio FE15 </i>, modelo <i class="bolder">VJFE59F11X-B0821H</i>.
+                                
+
+                            </p>
 
 
                         </div>
