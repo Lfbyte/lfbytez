@@ -92,6 +92,6 @@ function returnStylePosts(){
 
 
   checarPostagens()
- setTimeout(returnStylePosts, 300)
+ setTimeout(returnStylePosts, 150)
 //  setTimeout(returnStylePosts, 1000)
 
