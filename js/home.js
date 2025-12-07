@@ -6,7 +6,8 @@ window.addEventListener("load", (e) => {
 
   
 
-  setTimeout(returnStyle, 100);
+  // setTimeout(returnStyle, 100);
+  setTimeout(returnStyle, 1500);
 });
 
 var barraTopo = document.getElementById("x1");
