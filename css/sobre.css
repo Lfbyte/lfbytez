@@ -135,7 +135,7 @@ ul li a{
 
 div.light-dark-mode{
     
-    width:2.8rem;
+    /* width:2.8rem;
     height: 2.8rem;
     border-radius: 30%;
     background-color: #FBD38D; 
@@ -143,7 +143,8 @@ div.light-dark-mode{
     align-items: center;
     justify-self: start;
     padding:5px;
-    overflow: hidden;
+    overflow: hidden; */
+    display: none;
 
 }
 
