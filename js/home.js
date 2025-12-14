@@ -104,11 +104,12 @@ async function carregarPostsAntigos() {
       }
       let postsantigoscontainer = document.getElementById("oldpostscontainer");
       postsantigos.forEach((e) => {
-        console.log(e)
+        
+        let datformatada = e.data.split("-").reverse().join('-') 
         //construindo post
         let h3 = document.createElement("h3");
-        h3.innerHTML = `&#9658; <a href="${e.link}" target="_blank">${e.titulo}</a> &#8212; ${e.data}`;
-
+        h3.innerHTML = `&#9658; <a href="${e.link}" target="_blank">${e.titulo}</a> &#8212; ${e.categoria} &#8212; ${datformatada}`;
+        
         postsantigoscontainer.appendChild(h3);
       });
     });
