@@ -6,7 +6,7 @@ window.addEventListener("load", (e) => {
 
   
 
-  setTimeout(returnStyle, 500);
+  setTimeout(returnStyle, 350);
   // setTimeout(returnStyle, 1500);
 });
 
