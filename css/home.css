@@ -233,22 +233,24 @@ div.light-dark-mode:hover{
 
     padding: 0 15px;
     margin-top: 30px;
+    transition: 0.4s ease;
+    opacity: 0;
+
 }
 
 .postagens-antigas h1{
     transition: 0.5s ease;
-    opacity: 1;
     
 }
 
 #oldpostscontainer{
     font-family: sans-serif;
+    
 }
 
 #oldpostscontainer h3 a {
 
-        transition: 0.4s ease;
-
+        
 }
 
 #oldpostscontainer h3 a:hover{

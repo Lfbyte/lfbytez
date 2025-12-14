@@ -54,7 +54,7 @@ function returnStyle() {
         .forEach((e) => e.classList.add("reveal-article"));
       
       document
-        .querySelectorAll(".postagens-antigas h1")
+        .querySelectorAll(".postagens-antigas")
         .forEach((e) => e.classList.add("reveal-article"));
       
       
