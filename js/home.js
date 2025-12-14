@@ -6,13 +6,14 @@ window.addEventListener("load", (e) => {
 
   
 
-  setTimeout(returnStyle, 300);
+  setTimeout(returnStyle, 500);
   // setTimeout(returnStyle, 1500);
 });
 
 var barraTopo = document.getElementById("x1");
 var barraMeio = document.getElementById("x2");
 var barraBaixo = document.getElementById("x3");
+var testes = "";
 
 function animateX() {
     const isClosed = barraBaixo.style.display === "none";
@@ -41,26 +42,33 @@ function animateX() {
 }
 
 function returnStyle() {
-  document
-    .querySelectorAll("footer")
-    .forEach((e) => e.classList.add("reveal-article"));
-  document
-    .querySelectorAll("article")
-    .forEach((e) => e.classList.add("reveal-article"));
+      document
+        .querySelectorAll("footer")
+        .forEach((e) => e.classList.add("reveal-article"));
+      document
+        .querySelectorAll("article")
+        .forEach((e) => e.classList.add("reveal-article"));
 
- document
-    .querySelectorAll(".ultimas-postagens h1")
-    .forEach((e) => e.classList.add("reveal-article"));
-  }
+    document
+        .querySelectorAll(".ultimas-postagens h1")
+        .forEach((e) => e.classList.add("reveal-article"));
+      
+      document
+        .querySelectorAll(".postagens-antigas h1")
+        .forEach((e) => e.classList.add("reveal-article"));
+      
+      
+      
+}
+
+      
 
 async function carregarUltimosPosts() {
   await fetch("./posts/posts.json")
     .then((res) => res.json())
     .then((posts) => {
       //ordenando pelo post mais recente
-      let ultimosPosts = posts
-        .sort((a, b) => new Date(b.data) - new Date(a.data))
-        .slice(0, 3);
+      let ultimosPosts = posts.sort((a, b) => new Date(b.data) - new Date(a.data)).slice(0, 3);
       let containerPosts = document.getElementById("articlescontainer");
       ultimosPosts.forEach((e) => {
         //construindo post
@@ -74,7 +82,7 @@ async function carregarUltimosPosts() {
               <p class="description-style">${e.descricao}</p>
               <p class="description-style">${e.dataartigo}</p>
               <a class="ler-artigo" href="${e.link}">ler mais</a>
-             </div>
+            </div>
           </div>
             `;
 
@@ -83,4 +91,29 @@ async function carregarUltimosPosts() {
     });
 }
 
+async function carregarPostsAntigos() {
+  await fetch("./posts/posts.json")
+    .then((res) => res.json())
+    .then((posts) => {
+      //ordenando pelo post mais recente
+      let postsantigos = posts.sort((a, b) => new Date(b.data) - new Date(a.data)).slice(0);
+      //remove recentes  
+      for(let i=1; i <= 3; i++){
+
+          postsantigos.shift()
+      }
+      let postsantigoscontainer = document.getElementById("oldpostscontainer");
+      postsantigos.forEach((e) => {
+        console.log(e)
+        //construindo post
+        let h3 = document.createElement("h3");
+        h3.innerHTML = `&#9658; <a href="${e.link}" target="_blank">${e.titulo}</a> &#8212; ${e.data}`;
+
+        postsantigoscontainer.appendChild(h3);
+      });
+    });
+}
+
+
 carregarUltimosPosts();
+carregarPostsAntigos();

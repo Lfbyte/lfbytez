@@ -1,31 +1,41 @@
 [
-  {
-    "alt":"hello-world",
-    "banner":"./assets/img/helloworld.jpg", 
-    "imagem":"../assets/img/helloworld.jpg", 
-    "categoria":"blog", 
-    "data": "2025-11-08", 
-    "dataartigo":"🗓️ Nov 08, 2025 ",
-    "descricao":[
-      "Por que criar um blog ? O que motiva sua criação ? É algo inútil ?"
-    ],
-    "estilo":"cat-blog", 
-    "link": "posts/tecnologia/ola-mundo.html",
-    "titulo": "Olá, Mundo!",
-    "tituloartigo": "Por que ter um <i>BLOG</i> em 2025 ?"
+      {
+    "alt":"testes",
+    "banner":"./assets/img/testes.jpg", 
+    "imagem":"../assets/img/vaio-positivo.webp", 
+    "categoria":"tecnologia", 
+    "data": "2025-12-13", 
+    "dataartigo":"🗓️ Dez 13, 2025 ",
+    "descricao":"Muitos subestimam a importância dos testes... Entenda os motivos.",
+    "estilo":"cat-tech", 
+    "link": "posts/tecnologia/importancia-dos-testes.html",
+    "titulo": "Testes e sua importância",
+    "tituloartigo": "A Saga dos Notebooks "
   },
 
-  
-  {
+    {
+    "alt":"notebook-vaio-positivo",
+    "banner":"./assets/img/vaio-positivo.webp", 
+    "imagem":"../assets/img/vaio-positivo.webp", 
+    "categoria":"tecnologia", 
+    "data": "2025-11-11", 
+    "dataartigo":"🗓️ Nov 11, 2025 ",
+    "descricao":"Problemas com reconhecimento de wifi em notebooks VAIO e LENOVO",
+    "estilo":"cat-tech", 
+    "link": "posts/tecnologia/problemas-com-reconhecimento-de-wifi.html",
+    "titulo": "A Saga dos notebooks",
+    "tituloartigo": "A Saga dos Notebooks "
+  },
+
+
+    {
     "alt":"logo-bash",
-    "banner":"./assets/img/bash.png", 
-    "imagem":"../assets/img/bash.png", 
+    "banner":"./assets/img/bash.webp", 
+    "imagem":"../assets/img/bash.webp", 
     "categoria":"tecnologia", 
     "data": "2025-11-10", 
     "dataartigo":"🗓️ Nov 09, 2025 ",
-    "descricao":[
-      "Desde os primórdios do mundo GNU/Linux, o tradicional Shell..."
-    ],
+    "descricao":"Desde os primórdios do mundo GNU/Linux, o tradicional Shell...",
     "estilo":"cat-tech", 
     "link": "posts/tecnologia/por-que-aprender-shell-script.html",
     "titulo": "Você deveria aprender shell script ?",
@@ -33,19 +43,17 @@
   },
 
     {
-    "alt":"notebook-vaio-positivo",
-    "banner":"./assets/img/vaio-positivo.jpg", 
-    "imagem":"../assets/img/vaio-positivo.jpg", 
-    "categoria":"tecnologia", 
-    "data": "2025-11-11", 
-    "dataartigo":"🗓️ Nov 11, 2025 ",
-    "descricao":[
-      "Problemas com reconhecimento de wifi em notebooks VAIO e LENOVO"
-    ],
-    "estilo":"cat-tech", 
-    "link": "posts/tecnologia/problemas-com-reconhecimento-de-wifi.html",
-    "titulo": "A Saga dos notebooks",
-    "tituloartigo": "A Saga dos Notebooks "
+    "alt":"hello-world",
+    "banner":"./assets/img/helloworld.webp", 
+    "imagem":"../assets/img/helloworld.webp", 
+    "categoria":"blog", 
+    "data": "2025-11-08", 
+    "dataartigo":"🗓️ Nov 08, 2025 ",
+    "descricao":"Por que criar um blog ? O que motiva sua criação ? É algo inútil ?",
+    "estilo":"cat-blog", 
+    "link": "posts/blog/ola-mundo.html",
+    "titulo": "Olá, Mundo!",
+    "tituloartigo": "Por que ter um <i>BLOG</i> em 2025 ?"
   }
 
 
